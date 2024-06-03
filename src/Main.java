@@ -29,8 +29,10 @@ public class Main {
             System.out.println(year+" год не является високосным");
         }else if (year%100!=0){
             System.out.println(year+ " год високосный");
-        }else {
+        }else  if (year%400!=0){
             System.out.println(year+ " год не является високосным");
+        }else {
+            System.out.println(year+"год високосный");
         }
         System.out.println("Задание 4");
         int deliveryDistance = 95;
@@ -49,7 +51,10 @@ public class Main {
         }
         System.out.println("Задание 5");
         int monthNumber = 13;
-        switch (monthNumber){
+        if (monthNumber < 1 || monthNumber > 12) {
+            return;
+        } else {
+        switch (monthNumber) {
             case 1:
                 System.out.println("Зима");
                 break;
@@ -86,8 +91,7 @@ public class Main {
             case 12:
                 System.out.println("Зима");
                 break;
-            default:
-                System.out.println("Такого месяца не существует");
+        }
         }
     }
 }
